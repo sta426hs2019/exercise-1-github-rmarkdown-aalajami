@@ -1,0 +1,43 @@
+---
+title: "exercise_1b"
+author: "Ahmad"
+date: "September 21, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 1.b
+
+## Description
+
+HTML document that: samples 100 values from a log-normal distribution, creates a histogram of the distribution and the distribution on the log scale, and also reports the mean and variance of the sample
+
+## This is a R-code chunk
+
+Sampling 100 values from a log-normal distribution with meanlog= 1 and sdlog=0.25
+
+```{r}
+samples <- rlnorm(100, 1, 0.25)
+```
+
+Plotting the histogram of the distribution and that on the log scale
+
+```{r}
+hist(samples)
+hist(log(samples))
+```
+
+Reporting the mean and variance of the sample
+
+The sample mean is:
+```{r}
+mean(samples)
+```
+
+The sample variance is:
+```{r}
+var(samples)
+```
